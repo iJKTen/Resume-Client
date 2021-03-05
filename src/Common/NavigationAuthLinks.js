@@ -14,11 +14,22 @@ const NavigationAuthLinks = (props) => {
 
     return (
         <Fragment>
-            <a href='/profile' className={`block px-3 py-2 rounded-md ${props.className}`}>Your Profile</a>
-            <a href='/settings' className={`block px-3 py-2 rounded-md ${props.className}`}>Settings</a>
+            <a
+                href='/profile'
+                title='Your profile'
+                className={`block px-3 py-2 ${props.className}`}>
+                Your Profile
+            </a>
+            <a
+                href='/settings'
+                title='Settings'
+                className={`block px-3 py-2 ${props.className}`}>
+                Settings
+            </a>
             <button
                 onClick={logutUser}
-                className={`block px-3 py-2 text-sm ${props.className} text-base`} role='menuitem'>Sign out
+                className={`block px-3 py-2 text-sm ${props.className} text-base`} role='menuitem'>
+                Sign out
             </button>
         </Fragment>
     )

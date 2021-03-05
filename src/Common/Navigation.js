@@ -1,42 +1,33 @@
-import { useState } from 'react';
-import NavigationLinks from './NavigationLinks';
-import NavigationAuthLinks from './NavigationAuthLinks';
+import { Fragment, useState } from 'react';
+import DesktopNavigation from './DesktopNavigation';
+import ResponsiveNavigation from './ResponsiveNavigation';
 
 const Navigation = () => {
 
-    const [displaySection, setDisplaySection] = useState(() => ({
-        profile: false,
-        menu: false
+    const [display, setDisplay] = useState(() => ({
+        section: false
     }));
 
     const toggleMenu = (e) => {
         e.preventDefault();
-        setDisplaySection({
-            ...displaySection,
-            menu: !displaySection.menu
+        setDisplay({
+            section: !display.section
         });
     }
 
     return (
-        <div>
+        <Fragment>
             <nav>
                 <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                     <div className='flex items-center justify-between h-16'>
                         <div className='flex items-center'>
-                            <div className='flex-shrink-0'>
-
-                            </div>
-                            <div className='hidden md:block'>
-                                <div className='ml-10 flex items-baseline space-x-4'>
-                                    <a href='/' title='Home' className='bg-gray-900 text-white px-3 py-2 text-sm font-bold text-2xl'>Home</a>
+                            <div>
+                                <div className='flex items-baseline space-x-4'>
+                                    <a href='/' title='Home' className='text-white px-3 py-2 font-bold text-2xl'>Home</a>
                                 </div>
                             </div>
                         </div>
-                        <div className='hidden md:block'>
-                            <div className='ml-4 flex items-center md:ml-6'>
-                                <NavigationLinks />
-                            </div>
-                        </div>
+                        <DesktopNavigation />
                         <div className='-mr-2 flex md:hidden'>
                             <button
                                 onClick={toggleMenu}
@@ -55,20 +46,13 @@ const Navigation = () => {
                         </div>
                     </div>
                 </div>
-                {displaySection.menu === true ? (
+                {display.section === true ? (
                     <div className='md:hidden' id='mobile-menu'>
-                        <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
-                            <a href='/' title='Home' className='bg-gray-900 text-white px-3 py-2 text-sm font-bold'>Home</a>
-                        </div>
-                        <div className='pt-4 pb-3 border-t border-white'>
-                            <div className='mt-3 px-2 space-y-1'>
-                                <NavigationAuthLinks className='text-white' />
-                            </div>
-                        </div>
+                        <ResponsiveNavigation />
                     </div>
                 ) : ''}
             </nav>
-        </div>
+        </Fragment >
     )
 }
 
