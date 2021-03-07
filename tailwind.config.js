@@ -15,7 +15,11 @@ module.exports = {
       primary: 'var(--site-background-color)',
       secondary: 'var(--orange-color)',
       tertiary: 'var(--color-one)',
-      four: 'var(--color-two)',
+      orange: {
+        DEFAULT: 'var(--orange-900)',
+        800: 'var(--orange-800)',
+        900: 'var(--orange-900)',
+      },
       red: 'var(--red)',
       error: 'var(--red)',
       yellow: 'var(--yellow)',

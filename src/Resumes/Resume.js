@@ -50,7 +50,7 @@ const Resume = () => {
                 className='flex flex-col items-center justify-between md:w-3/4 mx-auto rounded-xl p-4 m-1'>
                 <div className='text-red w-full text-center'>
                     <p className='font-bold text-5xl'>{resume.name}</p>
-                    <p className='text-four font-bold text-xl'>{resume.headline}</p>
+                    <p className='text-orange font-bold text-xl'>{resume.headline}</p>
                 </div>
                 <div className='text-secondary w-full text-center my-4'>
                     <p>
@@ -135,10 +135,10 @@ const Resume = () => {
                                 key={item.title}
                                 className='md:grid md:grid-cols-3 md:gap-6 my-2'>
                                 <div className='md:col-span-1'>
-                                    <p className='text-four font-bold'>
+                                    <p className='text-orange font-bold'>
                                         {formatDate(item.from)} - {item.current === true ? 'Current' : formatDate(item.to)}
                                     </p>
-                                    <p className='text-four font-bold'>
+                                    <p className='text-orange font-bold'>
                                         {dateDifference(item.to, item.from)}
                                     </p>
                                 </div>
@@ -162,7 +162,7 @@ const Resume = () => {
                                 key={item.title}
                                 className='md:grid md:grid-cols-3 md:gap-6 my-2'>
                                 <div className='md:col-span-1'>
-                                    <p className='text-four font-bold'>{item.year}</p>
+                                    <p className='text-orange font-bold'>{item.year}</p>
                                 </div>
                                 <div className='mt-5 md:mt-0 md:col-span-2'>
                                     <p className='text-yellow font-bold'>
@@ -188,7 +188,7 @@ const Resume = () => {
                                 key={item.title}
                                 className='md:grid md:grid-cols-3 md:gap-6 my-2'>
                                 <div className='md:col-span-1'>
-                                    <p className='text-four font-bold'>{item.year}</p>
+                                    <p className='text-orange font-bold'>{item.year}</p>
                                 </div>
                                 <div className='mt-5 md:mt-0 md:col-span-2'>
                                     <p className='text-yellow font-bold'>
@@ -218,7 +218,7 @@ const Resume = () => {
                                 key={item.title}
                                 className='md:grid md:grid-cols-3 md:gap-6 my-2'>
                                 <div className='md:col-span-1'>
-                                    <p className='text-four font-bold'>{formatDate(item.issue_date)} - {formatDate(item.expiration_date)}</p>
+                                    <p className='text-orange font-bold'>{formatDate(item.issue_date)} - {formatDate(item.expiration_date)}</p>
                                 </div>
                                 <div className='mt-5 md:mt-0 md:col-span-2'>
                                     <p className='text-yellow font-bold'>
@@ -247,7 +247,7 @@ const Resume = () => {
                                 key={item.school}
                                 className='md:grid md:grid-cols-3 md:gap-6 my-2'>
                                 <div className='md:col-span-1'>
-                                    <p className='text-four font-bold'>
+                                    <p className='text-orange font-bold'>
                                         {formatDate(item.from)} - {formatDate(item.to)}
                                     </p>
                                 </div>
@@ -272,7 +272,7 @@ const Resume = () => {
                                 key={item.title}
                                 className='md:grid md:grid-cols-3 md:gap-6 my-2'>
                                 <div className='md:col-span-1'>
-                                    <p className='text-four font-bold'>{item.year}</p>
+                                    <p className='text-orange font-bold'>{item.year}</p>
                                 </div>
                                 <div className='mt-5 md:mt-0 md:col-span-2'>
                                     <p className='text-yellow font-bold'>

@@ -9,7 +9,7 @@ const SideBar = ({ title, subHeading }) => {
                     {title}
                 </h3>
                 {subHeading !== undefined ?
-                    <p className='mt-1 text-sm text-four'>
+                    <p className='mt-1 text-sm text-orange'>
                         {subHeading}
                     </p> : <Fragment />
                 }
