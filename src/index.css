@@ -28,10 +28,6 @@
   @apply mt-1 block w-full shadow-sm sm:text-sm border py-2 px-3 rounded-md
 }
 
-.input-url {
-  @apply block w-full shadow-sm sm:text-sm border-t border-b border-r py-2 px-3 rounded-r-md
-}
-
 .lbl {
   @apply block text-sm font-medium
 }

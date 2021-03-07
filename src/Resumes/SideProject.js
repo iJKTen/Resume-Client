@@ -59,10 +59,6 @@ const SideProject = (props) => {
                             </label>
                             <div
                                 className='mt-1 flex rounded-md shadow-sm'>
-                                <span
-                                    className='http-lbl'>
-                                    http://
-                                </span>
                                 <input
                                     onChange={(e) => props.componentChanged(e, props.resumeKey, index)}
                                     value={item.url}
@@ -70,8 +66,8 @@ const SideProject = (props) => {
                                     name={`sp_url${index}`}
                                     data-customkey='url'
                                     id={`sp_url${index}`}
-                                    className='input-url'
-                                    placeholder='www.example.com'
+                                    className='input-txt'
+                                    placeholder='https://www.example.com'
                                 />
                             </div>
                         </div>
@@ -82,9 +78,6 @@ const SideProject = (props) => {
                                 GitHub Url
                             </label>
                             <div className='mt-1 flex rounded-md shadow-sm'>
-                                <span className='http-lbl'>
-                                    http://
-                                </span>
                                 <input
                                     onChange={(e) => props.componentChanged(e, props.resumeKey, index)}
                                     value={item.github_url}
@@ -92,8 +85,8 @@ const SideProject = (props) => {
                                     name={`sp_github_url${index}`}
                                     data-customkey='github_url'
                                     id={`sp_github_url${index}`}
-                                    className='input-url'
-                                    placeholder='www.github.com'
+                                    className='input-txt'
+                                    placeholder='https://www.github.com'
                                 />
                             </div>
                         </div>

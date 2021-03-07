@@ -17,18 +17,14 @@ const CareerInformation = (props) => {
                         </label>
                         <div
                             className='mt-1 flex rounded-md shadow-sm'>
-                            <span
-                                className='http-lbl'>
-                                http://
-                            </span>
                             <input
                                 onChange={(e) => props.socialLinkChanged(e, item)}
                                 type='url'
                                 name={`socialLink${index}`}
                                 id={`socialLink${index}`}
                                 value={props.links[item]}
-                                className='input-url'
-                                placeholder={`www.${item}.com/username`} />
+                                className='input-txt'
+                                placeholder={`https://www.${item}.com/username`} />
                         </div>
                     </div>
                 ))

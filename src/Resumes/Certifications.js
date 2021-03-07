@@ -77,9 +77,6 @@ const Certifications = (props) => {
                                 Credential Url
                             </label>
                             <div className='mt-1 flex rounded-md shadow-sm'>
-                                <span className='http-lbl'>
-                                    http://
-                                </span>
                                 <input
                                     onChange={(e) => props.componentChanged(e, props.resumeKey, index)}
                                     value={item.credential_url}
@@ -87,8 +84,8 @@ const Certifications = (props) => {
                                     name={`lc_credential_url${index}`}
                                     data-customkey='credential_url'
                                     id={`lc_credential_url${index}`}
-                                    className='input-url'
-                                    placeholder='www.example.com'
+                                    className='input-txt'
+                                    placeholder='https://www.example.com'
                                 />
                             </div>
                         </div>

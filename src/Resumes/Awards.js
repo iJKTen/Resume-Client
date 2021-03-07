@@ -75,10 +75,6 @@ const Awards = (props) => {
                             </label>
                             <div
                                 className='mt-1 flex rounded-md shadow-sm'>
-                                <span
-                                    className='http-lbl'>
-                                    http://
-                                </span>
                                 <input
                                     onChange={(e) => props.componentChanged(e, props.resumeKey, index)}
                                     value={item.url}
@@ -86,8 +82,8 @@ const Awards = (props) => {
                                     name={`t_url${index}`}
                                     data-customkey='url'
                                     id={`t_url${index}`}
-                                    className='input-url'
-                                    placeholder='www.example.com'
+                                    className='input-txt'
+                                    placeholder='https://www.example.com'
                                 />
                             </div>
                         </div>
